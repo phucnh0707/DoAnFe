@@ -1,0 +1,71 @@
+{
+  "category": [
+    {
+      "catName": "Men",
+      "id": 1
+    },
+    {
+      "catName": "Women",
+      "id": 2
+    }
+  ], 
+  "product": [
+    {
+        "id":1,
+        "proName": "MEN'S TAJA COMMISSIONER",
+        "price":130000,
+        "img": "./assets/images/item-1.jpg",
+        "catID": 1
+    },
+    {
+        "id":2,
+        "proName": "MEN'S TAJA ",
+        "price":150000,
+        "img": "./assets/images/item-2.jpg",
+        "catID": 1
+    },
+    {
+        "id":3,
+        "proName": "MEN'S ",
+        "price":180000,
+        "img": "./assets/images/item-3.jpg",
+        "catID": 1
+    },
+    {
+        "id":4,
+        "proName": "MEN'S TAJA COMMISSIONER",
+        "price":130000,
+        "img": "./assets/images/item-4.jpg",
+        "catID": 2
+    },
+    {
+        "id":5,
+        "proName": "MEN'S TAJA ",
+        "price":150000,
+        "img": "./assets/images/item-5.jpg",
+        "catID": 2
+    },
+    {
+        "id":6,
+        "proName": "MEN'S ",
+        "price":180000,
+        "img": "./assets/images/item-6.jpg",
+        "catID": 2
+    },
+    {
+        "id":7,
+        "proName": "MEN'S TAJA ",
+        "price":150000,
+        "img": "./assets/images/item-7.jpg",
+        "catID": 2
+    },
+    {
+        "id":8,
+        "proName": "MEN'S ",
+        "price":180000,
+        "img": "./assets/images/item-8.jpg",
+        "catID": 1
+    }
+
+  ]
+}
