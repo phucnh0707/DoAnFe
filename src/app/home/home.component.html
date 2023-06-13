@@ -104,12 +104,12 @@
 
                 <div class="col-lg-3 mb-4 text-center" *ngFor="let itemPro of dataPro">
                     <div class="product-entry border">
-                        <a href="#" class="prod-img">
+                        <a routerLink="detail/{{itemPro.id}}" class="prod-img">
                             <img src="{{itemPro.img}}" class="img-fluid"
                                 alt="Free html5 bootstrap 4 template">
                         </a>
                         <div class="desc">
-                            <h2><a href="#">{{itemPro.proName}}</a></h2>
+                            <h2><a routerLink="detail/{{itemPro.id}}">{{itemPro.proName}}</a></h2>
                             <span class="price">{{itemPro.price}}</span>
                         </div>
                     </div>

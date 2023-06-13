@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CommonService } from '../common.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-detail',
@@ -6,5 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent {
+
+  constructor(private commonService:CommonService,private activatedRoute: ActivatedRoute){}
+  id:any;
+  ngOnInit() {
+    this.activatedRoute.paramMap.subscribe(params => {
+      this.id = params.get('id');
+    });
+  }
+
+  
 
 }

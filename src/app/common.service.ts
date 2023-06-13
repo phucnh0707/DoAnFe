@@ -29,4 +29,10 @@ export class CommonService {
   listAllProduct() {
     return this._http.get("http://localhost:3000/product");
   }
+
+  listProductByCat(catId:any){
+    return this._http.get("http://localhost:3000/product?catId=" + catId);
+  }
+
+
 }

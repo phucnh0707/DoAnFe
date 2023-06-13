@@ -10,7 +10,8 @@ import { CategoryComponent } from './category/category.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'product/id', component: ProductComponent },
+  { path: 'product', component: ProductComponent },
+  { path: 'product/:id', component: ProductComponent },
   { path: 'detail/:id', component: DetailComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
