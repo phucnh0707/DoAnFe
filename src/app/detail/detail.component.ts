@@ -11,12 +11,18 @@ export class DetailComponent {
 
   constructor(private commonService:CommonService,private activatedRoute: ActivatedRoute){}
   id:any;
+  itemPro:any;
   ngOnInit() {
     this.activatedRoute.paramMap.subscribe(params => {
       this.id = params.get('id');
     });
+    this.getProductById(this.id);
   }
 
-  
+  getProductById(id:any) {
+    this.commonService.getProById(id).subscribe((res)=>{
+      this.itemPro = res;
+    });
+    }
 
 }

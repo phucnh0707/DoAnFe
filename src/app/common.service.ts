@@ -34,5 +34,8 @@ export class CommonService {
     return this._http.get("http://localhost:3000/product?catId=" + catId);
   }
 
-
+  getProById(id: any) {
+    return this._http.get("http://localhost:3000/product/" + id);
+  
+  }
 }
