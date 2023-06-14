@@ -8,11 +8,10 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent {
-
   constructor(private commonService:CommonService,private activatedRoute: ActivatedRoute){}
   id:any;
-  itemPro:any;
-  ngOnInit() {
+  itemPro:undefined|any;
+  ngOnInit() :void{
     this.activatedRoute.paramMap.subscribe(params => {
       this.id = params.get('id');
     });

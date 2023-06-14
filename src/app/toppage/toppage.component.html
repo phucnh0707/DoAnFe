@@ -6,13 +6,13 @@
                     <div id="colorlib-logo"><a routerLink="">Footwear</a></div>
                 </div>
                 <div class="col-sm-5 col-md-3">
-                    <form action="#" class="search-wrap">
-                        <div class="form-group">
-                            <input type="search" class="form-control search" placeholder="Search">
-                            <button class="btn btn-primary submit-search text-center" type="submit"><i
+                    <!-- <form action="#" class="search-wrap">
+                        <div class="form-group"> -->
+                            <input type="text" class="form-control search" name="proName" [(ngModel)]="proName" (ngModelChange)="Search()" placeholder="Search">
+                            <!-- <button class="btn btn-primary submit-search text-center" type="submit"><i
                                     class="icon-search"></i></button>
                         </div>
-                    </form>
+                    </form> -->
                 </div>
             </div>
             <div class="row">
@@ -21,12 +21,11 @@
                         <li class="active"><a routerLink="">Home</a></li>
                         
                         <li *ngFor="let itemCat of dataCate">
-                            <a routerLink="product/{{itemCat.id}}">{{itemCat.catName}}</a>
+                            <a routerLink="/product/{{itemCat.id}}">{{itemCat.catName}}</a>
                         </li>
 
-                        <!-- <li><a routerLink="product/2">Women</a></li> -->
-                        <li><a routerLink="about">About</a></li>
-                        <li><a routerLink="contact">Contact</a></li>
+                        <li><a routerLink="/about">About</a></li>
+                        <li><a routerLink="/contact">Contact</a></li>
                         <li class="cart"><a href="cart.html"><i class="icon-shopping-cart"></i> Cart [0]</a></li>
                     </ul>
                 </div>

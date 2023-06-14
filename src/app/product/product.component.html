@@ -1,7 +1,7 @@
 <div id="page">
     <app-toppage></app-toppage>
 
-    <div class="breadcrumbs">
+    <!-- <div class="breadcrumbs">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -9,9 +9,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="breadcrumbs-two">
+    <!-- <div class="breadcrumbs-two">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -24,9 +24,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="colorlib-featured">
+    <!-- <div class="colorlib-featured">
         <div class="container">
             <div class="row">
                 <div class="col-sm-4 text-center">
@@ -55,7 +55,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="colorlib-product">
         <div class="container">
@@ -68,31 +68,16 @@
 
                 <div class="col-md-3 col-lg-3 mb-4 text-center" *ngFor="let itemPro of dataPro">
                     <div class="product-entry border">
-                        <a routerLink="detail/{{itemPro.id}}" class="prod-img">
-                            <img src="{{itemPro.img}}" class="img-fluid" alt="Free html5 bootstrap 4 template">
+                        <a routerLink="/detail/{{itemPro.id}}" class="prod-img">
+                            <img src="{{itemPro.image}}" class="img-fluid" alt="Free html5 bootstrap 4 template">
                         </a>
                         <div class="desc">
-                            <h2><a routerLink="detail/{{itemPro.id}}">{{itemPro.proName}}</a></h2>
+                            <h2><a routerLink="/detail/{{itemPro.id}}">{{itemPro.proName}}</a></h2>
                             <span class="price">${{itemPro.price}}</span>
                         </div>
                     </div>
                 </div>
                 
-            </div>
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <div class="block-27">
-                   <ul>
-                       <li><a href="#"><i class="ion-ios-arrow-back"></i></a></li>
-                      <li class="active"><span>1</span></li>
-                      <li><a href="#">2</a></li>
-                      <li><a href="#">3</a></li>
-                      <li><a href="#">4</a></li>
-                      <li><a href="#">5</a></li>
-                      <li><a href="#"><i class="ion-ios-arrow-forward"></i></a></li>
-                   </ul>
-                </div>
-                </div>
             </div>
         </div>
     </div>

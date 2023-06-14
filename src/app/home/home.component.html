@@ -1,6 +1,62 @@
 <div id="page">
-    <app-toppage></app-toppage>
-    <aside id="colorlib-hero">
+    <nav class="colorlib-nav" role="navigation">
+        <div class="top-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-7 col-md-9">
+                        <div id="colorlib-logo"><a routerLink="">Footwear</a></div>
+                    </div>
+                    <div class="col-sm-5 col-md-3">
+                        <!-- <form action="#" class="search-wrap">
+                            <div class="form-group"> -->
+                                <input type="text" class="form-control search" name="proName" [(ngModel)]="proName" (ngModelChange)="Search()" placeholder="Search">
+                                <!-- <button class="btn btn-primary submit-search text-center" type="submit"><i
+                                        class="icon-search"></i></button>
+                            </div>
+                        </form> -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 text-left menu-1">
+                        <ul>
+                            <li class="active"><a routerLink="">Home</a></li>
+                            
+                            <li *ngFor="let itemCat of dataCate">
+                                <a routerLink="/product/{{itemCat.id}}">{{itemCat.catName}}</a>
+                            </li>
+    
+                            <li><a routerLink="/about">About</a></li>
+                            <li><a routerLink="/contact">Contact</a></li>
+                            <li class="cart"><a href="cart.html"><i class="icon-shopping-cart"></i> Cart [0]</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sale">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 offset-sm-2 text-center">
+                        <div class="row">
+                            <div class="owl-carousel2">
+                                <div class="item">
+                                    <div class="col">
+                                        <h3><a href="#">25% off (Almost) Everything! Use Code: Summer Sale</a></h3>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="col">
+                                        <h3><a href="#">Our biggest sale yet 50% off all summer shoes</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- <aside id="colorlib-hero">
         <div class="flexslider">
             <ul class="slides">
                 <li style="background-image: url(./assets/images/img_bg_1.jpg);">
@@ -59,8 +115,8 @@
                 </li>
             </ul>
         </div>
-    </aside>
-    <div class="colorlib-intro">
+    </aside> -->
+    <!-- <div class="colorlib-intro">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
@@ -69,8 +125,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="colorlib-product">
+    </div> -->
+    <!-- <div class="colorlib-product">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-6 text-center">
@@ -91,7 +147,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="colorlib-product">
         <div class="container">
@@ -102,27 +158,24 @@
             </div>
             <div class="row row-pb-md">
 
-                <div class="col-lg-3 mb-4 text-center" *ngFor="let itemPro of dataPro">
+                <div class="col-lg-3 mb-4 text-center" *ngFor="let itemPro of products | paginate: {itemsPerPage:8,currentPage:p}">
                     <div class="product-entry border">
-                        <a routerLink="detail/{{itemPro.id}}" class="prod-img">
-                            <img src="{{itemPro.img}}" class="img-fluid"
+                        <a routerLink="/detail/{{itemPro.id}}" class="prod-img">
+                            <img src="{{itemPro.image}}" class="img-fluid"
                                 alt="Free html5 bootstrap 4 template">
                         </a>
                         <div class="desc">
-                            <h2><a routerLink="detail/{{itemPro.id}}">{{itemPro.proName}}</a></h2>
+                            <h2><a routerLink="/detail/{{itemPro.id}}">{{itemPro.proName}}</a></h2>
                             <span class="price">{{itemPro.price}}</span>
                         </div>
                     </div>
                 </div>
                
             </div>
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <p><a href="#" class="btn btn-primary btn-lg">Shop All Products</a></p>
-                </div>
-            </div>
+           
         </div>
     </div>
+<pagination-controls (pageChange)="p = $event" ></pagination-controls>
 
     <app-partner></app-partner>
     <app-footer></app-footer>

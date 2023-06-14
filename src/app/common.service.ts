@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Product } from './model/product';
 
 @Injectable({
   providedIn: 'root'
@@ -37,5 +38,9 @@ export class CommonService {
   getProById(id: any) {
     return this._http.get("http://localhost:3000/product/" + id);
   
+  }
+
+  getProduct(){
+    return this._http.get<Product[]>("http://localhost:3000/product/");
   }
 }

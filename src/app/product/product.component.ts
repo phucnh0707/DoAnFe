@@ -11,7 +11,6 @@ export class ProductComponent implements OnInit {
   constructor(private commonService:CommonService,private activatedRoute: ActivatedRoute){}
   dataPro:any;
   catId:any;
-
   ngOnInit():void{
     this.activatedRoute.paramMap.subscribe(params => {
       this.catId = params.get('id');
